@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #efece9;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.list-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* Creates space between the two containers */
+}
+
+#firstContainer {
+    margin-right: 10px;
+    /* Add horizontal space to the right of the first container */
+}
+
+#secondContainer {
+    margin-left: 10px;
+    /* Add horizontal space to the left of the second container */
+}
+
+.container-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #eee;
+    padding: 5px;
+    width: 100%;
+    min-height: 1.5em;
+    font-size: 0.85em;
+    border-radius: 5px;
+    border-color: black;
+}
+
+.container-list li {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    width: auto;
+    cursor: move;
+    background-color: #fafafa;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.container-list li.placeholder {
+    height: 1.2em;
+    background-color: #fff;
+    border: 1px dashed #bbb;
+}
+
+.containerItem {
+    border: 1px solid #bbb;
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 20px;
+}
+
+.containerItem img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.containerItem p {
+    margin: 0;
+}
+
+.dragging {
+    opacity: 0.2;
+}
+
+.instruction {
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    color: green;
+    display: none;
+}
+
+.show-message {
+    display: block;
+    animation: fadeOut 2s;
+}
+
+.list-name {
+    text-align: center;
+}
+
+
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    min-width: 250px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #333;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 9999;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 85%;
+    /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.message-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: none;
+}
+
+
+.navbar {
+    background-color: #679690;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+/* CSS for the footer */
+.footer {
+    background-color: #679290;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    position: absolute;
+    bottom: 0;
+    height: 65px;
+    width: 1536px;
+    l
+   
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
